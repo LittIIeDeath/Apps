@@ -18,21 +18,42 @@ nav img{
     margin: 15px 0px 15px 100px;
 }
 
+.warning {
+    background: rgba(186, 71, 71, 1);
+    width: 218px;
+    height: 34px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto 0 auto;
+    display: flex;
+    visibility: hidden;
+}
+
+.warning h1{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(95, 15, 29, 1);
+}
+
 .board{
     width: 330px;
     height: 397px;
     align-items: center;
     display: flex;
     align-content: center;
-    margin: 120px auto 70px auto;
+    margin: 90px auto 70px auto;
     flex-direction: column;
 }
 
-.board .column{
+.board .row{
     display: flex;
 }
 
-.board .column div{
+.board .row div{
     width: 62px;
     height: 62px;
     margin: 4px;
@@ -42,7 +63,7 @@ nav img{
     display: flex;
 }
 
-.board .column div p{
+.board .row div p{
     color: white;
     font-weight: bold;
     font-size: 5vh;
@@ -59,11 +80,11 @@ nav img{
     flex-direction: column;
 }
 
-.keyboard .column{
+.keyboard .row{
     margin-bottom: 5px;
 }
 
-.keyboard .column button{
+.keyboard .row button{
     height: 52px;
     width: 43px;
     align-items: center;
@@ -73,6 +94,6 @@ nav img{
     font-size: 2vh;
 }
 
-.keyboard .column .enter {
+.keyboard .row .enter {
     width: auto;
 }
