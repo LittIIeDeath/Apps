@@ -1,0 +1,17 @@
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\bin\Debug\net8.0-windows\Tik Tak Toe.exe
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\bin\Debug\net8.0-windows\Tik Tak Toe.deps.json
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\bin\Debug\net8.0-windows\Tik Tak Toe.runtimeconfig.json
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\bin\Debug\net8.0-windows\Tik Tak Toe.dll
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\bin\Debug\net8.0-windows\Tik Tak Toe.pdb
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik_Tak_Toe.Form1.resources
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik Tak Toe.csproj.GenerateResource.cache
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik Tak Toe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik Tak Toe.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik Tak Toe.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik Tak Toe.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik Tak Toe.sourcelink.json
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik Tak Toe.dll
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\refint\Tik Tak Toe.dll
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik Tak Toe.pdb
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\Tik Tak Toe.genruntimeconfig.cache
+C:\Users\lenovo\Desktop\code\Apps\Jogos\Tik Tak Toe\Tik Tak Toe\Tik Tak Toe\obj\Debug\net8.0-windows\ref\Tik Tak Toe.dll
