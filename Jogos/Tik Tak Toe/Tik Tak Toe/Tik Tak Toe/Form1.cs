@@ -5,8 +5,11 @@ namespace Tik_Tak_Toe
         string player = "X";
         int playerTurn = 0;
         bool gameOver = false;
+        Button[,] buttons = new Button[3, 3]; 
+
         public Form1()
         {
+            InitializeButtons();
             InitializeComponent();
         }
 
@@ -29,146 +32,73 @@ namespace Tik_Tak_Toe
             }
         }
 
-        public void IfVictory()
+        public void InitializeButtons()
         {
-            if(button1.Text == "X" & button2.Text == "X" & button3.Text == "X" |
-               button1.Text == "O" & button2.Text == "O" & button3.Text == "O")
+            int buttonSize = 77;
+            int startX = 18;
+            int startY = 26;
+
+            for(int row = 0; row < 3; row++)
             {
-                labelVictory.Text = $"O jogador ''{player}'' venceu!!!";
-                gameOver = true;
-            }
-            else if (button4.Text == "X" & button5.Text == "X" & button6.Text == "X" |
-                     button4.Text == "O" & button5.Text == "O" & button6.Text == "O")
-            {
-                labelVictory.Text = $"O jogador ''{player}'' venceu!!!";
-                gameOver = true;
-            }
-            else if (button7.Text == "X" & button8.Text == "X" & button9.Text == "X" |
-                     button7.Text == "O" & button8.Text == "O" & button9.Text == "O")
-            {
-                labelVictory.Text = $"O jogador ''{player}'' venceu!!!";
-                gameOver = true;
-            }
-            else if (button1.Text == "X" & button4.Text == "X" & button7.Text == "X" |
-                     button1.Text == "O" & button4.Text == "O" & button7.Text == "O")
-            {
-                labelVictory.Text = $"O jogador ''{player}'' venceu!!!";
-                gameOver = true;
-            }
-            else if (button2.Text == "X" & button5.Text == "X" & button8.Text == "X" |
-                     button2.Text == "O" & button5.Text == "O" & button8.Text == "O")
-            {
-                labelVictory.Text = $"O jogador ''{player}'' venceu!!!";
-                gameOver = true;
-            }
-            else if (button3.Text == "X" & button6.Text == "X" & button9.Text == "X" |
-                     button3.Text == "O" & button6.Text == "O" & button9.Text == "O")
-            {
-                labelVictory.Text = $"O jogador ''{player}'' venceu!!!";
-                gameOver = true;
-            }
-            else if (button1.Text == "X" & button5.Text == "X" & button9.Text == "X" |
-                     button1.Text == "O" & button5.Text == "O" & button9.Text == "O")
-            {
-                labelVictory.Text = $"O jogador ''{player}'' venceu!!!";
-                gameOver = true;
-            }
-            else if (button3.Text == "X" & button5.Text == "X" & button7.Text == "X" |
-                     button3.Text == "O" & button5.Text == "O" & button7.Text == "O")
-            {
-                labelVictory.Text = $"O jogador ''{player}'' venceu!!!";
-                gameOver = true;
+                for(int col = 0; col < 3; col++ ) 
+                {
+                    buttons[row, col] = new Button();
+                    buttons[row, col].Width = buttonSize;
+                    buttons[row, col].Height = buttonSize;
+                    buttons[row, col].Left = startX + col * buttonSize;
+                    buttons[row, col].Top = startY + row * buttonSize;
+                    buttons[row, col].Click += new EventHandler(Button_Click);
+                    Controls.Add(buttons[row, col]);
+                }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
-            if (button1.Text == "" & gameOver == false)
+            Button clickedButton = sender as Button;
+            if (clickedButton.Text == "" & gameOver == false)
             {
                 PlayerTurn();
-                button1.Text = player;
-                IfVictory();
+                clickedButton.Text = player;
+                CheckWinner();
+                if(CheckWinner() == true)
+                {
+                    labelVictory.Text = $"O Jogador ''{player}'' ganhou!!!";
+                    gameOver = true;
+                }
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public bool CheckWinner()
         {
-            if (button2.Text == "" & gameOver == false)
+            // Verifica as linhas
+            for (int i = 0; i < 3; i++) 
             {
-                PlayerTurn();
-                button2.Text = player;
-                IfVictory();
+                if (CheckCells(buttons[i, 0], buttons[i, 1], buttons[i, 2]))
+                    return true;
             }
+
+            // Verifica as colunas
+            for (int i = 0; i < 3; i++)
+            {
+                if (CheckCells(buttons[0, i], buttons[1, i], buttons[2, i]))
+                    return true;
+            }
+
+            // Verifica as diagonais
+            if (CheckCells(buttons[0, 0], buttons[1, 1], buttons[2, 2]) ||
+                CheckCells(buttons[0, 2], buttons[1, 1], buttons[2, 0]))
+            {
+                return true;
+            }
+                    
+
+            return false;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public bool CheckCells(Button cell1, Button cell2, Button cell3)
         {
-            if (button3.Text == "" & gameOver == false)
-            {
-                PlayerTurn();
-                button3.Text = player;
-                IfVictory();
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (button4.Text == "" & gameOver == false)
-            {
-                PlayerTurn();
-                button4.Text = player;
-                IfVictory();
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (button5.Text == "" & gameOver == false)
-            {
-                PlayerTurn();
-                button5.Text = player;
-                IfVictory();
-            }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if (button6.Text == "" & gameOver == false)
-            {
-                PlayerTurn();
-                button6.Text = player;
-                IfVictory();
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            if (button7.Text == "" & gameOver == false)
-            {
-                PlayerTurn();
-                button7.Text = player;
-                IfVictory();
-            }
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            if (button8.Text == "" & gameOver == false)
-            {
-                PlayerTurn();
-                button8.Text = player;
-                IfVictory();
-            }
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            if (button9.Text == "" & gameOver == false)
-            {
-                PlayerTurn();
-                button9.Text = player;
-                IfVictory();
-            }
+            return cell1.Text == player & cell2.Text == player & cell3.Text == player;
         }
     }
 }
