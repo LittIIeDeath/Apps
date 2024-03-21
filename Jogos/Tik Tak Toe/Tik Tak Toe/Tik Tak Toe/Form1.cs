@@ -60,8 +60,14 @@ namespace Tik_Tak_Toe
             {
                 PlayerTurn();
                 clickedButton.Text = player;
-                CheckWinner();
-                if(CheckWinner() == true)
+
+                if (CheckDraw())
+                {
+                    labelVictory.Text = $"O Jogo terminou em empate";
+                    gameOver = true;
+                }
+
+                if (CheckWinner())
                 {
                     labelVictory.Text = $"O Jogador ''{player}'' ganhou!!!";
                     gameOver = true;
@@ -91,14 +97,28 @@ namespace Tik_Tak_Toe
             {
                 return true;
             }
-                    
 
             return false;
+        }
+        public bool CheckDraw()
+        {
+            int totalButtons = buttons.GetLength(0) * buttons.GetLength(1);
+            int filledButtons = 0;
+
+            foreach(Button button in buttons)
+            {
+                if (!string.IsNullOrEmpty(button.Text))
+                {
+                    filledButtons++;
+                }
+            }
+
+            return filledButtons == totalButtons & !CheckWinner();
         }
 
         public bool CheckCells(Button cell1, Button cell2, Button cell3)
         {
-            return cell1.Text == player & cell2.Text == player & cell3.Text == player;
+            return cell1.Text == player && cell2.Text == player && cell3.Text == player;
         }
     }
 }
